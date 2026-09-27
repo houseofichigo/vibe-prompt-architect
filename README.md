@@ -34,6 +34,7 @@ npx skills use houseofichigo/vibe-prompt-architect --skill vibe-prompt-architect
 skills/vibe-prompt-architect/
   LICENSE.txt
   SKILL.md
+  agents/openai.yaml
   assets/prompt-templates/debug.md
   assets/prompt-templates/feature.md
   assets/prompt-templates/mock.md
