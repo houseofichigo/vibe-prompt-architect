@@ -1,0 +1,38 @@
+# Mirrors what skill_rules.py leaves out of dist/skill.zip, so a fresh clone
+# always rebuilds the same archive.
+
+# Caches and editor folders
+.DS_Store
+__pycache__/
+*.py[co]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+.idea/
+.vscode/
+
+# Credentials (never packaged; the validator also fails if one exists in skills/)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.dist
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+.git-credentials
+.netrc
+.npmrc
+.pypirc
+
+# Repository archives from build_repo.py --repo-zip (root only; Skill assets may be ZIPs)
+/*-repo.zip

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Vibe Prompt Architect"
+  short_description: "Shape app ideas into build-ready prompts"
+  default_prompt: "Use $vibe-prompt-architect to turn my app idea into a tool-specific build prompt."
+
+policy:
+  allow_implicit_invocation: true

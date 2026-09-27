@@ -1,0 +1,27 @@
+name: Validate Agent Skill
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Validate Skill against its declared host rules
+        run: python3 scripts/validate_skill.py
+      - name: Check dist/skill.zip is up to date
+        run: python3 scripts/build_dist.py --check
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v

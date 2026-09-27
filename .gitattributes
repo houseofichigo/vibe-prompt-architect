@@ -1,0 +1,17 @@
+# Keep line endings identical on every OS so dist/skill.zip stays in sync.
+* text=auto eol=lf
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
